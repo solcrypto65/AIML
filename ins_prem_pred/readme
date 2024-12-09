@@ -1,1 +1,34 @@
+This model is for predicting health insurance premium, using Linear Regression from sklearn library
+
+Data file (insurance.csv) is from Kagle competition
+Number of records - 1339.
+
+Features :
+	age -				numeric
+	sex - 			categoric (male / female)
+	bmi - 			numeric
+	children - 		numeric
+	smoker - 		categoric (yes / no)
+	region - 		categoric (4 unique vaalues)
+
+Target :
+	charges - numeric
+
+Understanding Data
+	1. There are no null values in any of the column
+	2. age ranges from 18 to 64
+	3. bmi ranges from 15.96 to 53.13
+	4. children ranges from 0 to 5
+	5. there are no outliers in the data
+
+Feature Engineering
+	1. scale age, bmi, children between 0 to 1 using minmax scaler from sklearn
+	2. change value of sex column to numeric, 0 = male, 1 = female
+	3. change value of smoker column to numeric, 0 = yes, 1 = no
+	4. do one hot encoding for region 
+
+
+Model Accuracy
+	1. Root Mean Square Error is 113067.54
+	2. Model accuracy is 74.31
 
